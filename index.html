@@ -1,0 +1,7266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <title> Topmovies.com </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#FFA500"> <!-- Set the theme color to orange (#FFA500) -->
+   <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/4221/4221484.png">
+
+
+
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Your Page</title>
+      <script>
+          setTimeout(function() {
+              var userResponse = confirm("Didn't find any movie/web series/show you wanted. Go to the suggested website?");
+
+              if (userResponse) {
+                  window.location.href = "https://topmovies.anshpreet2442.repl.co/understand.html";
+              }
+          }, 6500); // 6.5 seconds
+      </script>
+  </head>
+  <body>
+      <!-- Your page content goes here -->
+  </body>
+  </html>
+
+
+
+
+
+
+  
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #ccccff;
+          body {
+              overflow: auto; /* or overflow: visible; */
+          }
+
+      
+        #menu-bar {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            z-index: 2;
+            transition: all 0.3s ease-in-out;
+        }
+
+        #menu-icon {
+            font-size: 24px;
+            color: #333;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: #fff;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        #sidebar a {
+            display: block;
+            padding: 15px;
+            text-decoration: none;
+            color: #333;
+            transition: background-color 0.3s ease;
+        }
+
+        #sidebar a:hover {
+            background-color: #f0f0f0;
+        }
+
+        .dropdown {
+            display: none;
+        }
+
+        .dropdown.active {
+            display: block;
+        }
+
+        .button {
+            background-color: #ccccff;
+            padding: 10px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #b3b3ff;
+        }
+    </style>
+</head>
+<body>
+
+  <script>
+    window.intercomSettings = {
+      api_base: "https://api-iam.intercom.io",
+      app_id: "omwicgvf",
+      name: <?php echo json_encode($current_user->name) ?>, // Full name
+      user_id: <?php echo json_encode($current_user->id) ?>, // a UUID for your user
+      email: <?php echo json_encode($current_user->email) ?>, // the email for your user
+      created_at: "<?php echo strtotime($current_user->created_at) ?>" // Signup date as a Unix timestamp
+    };
+  </script>
+
+  <script>
+  // We pre-filled your app ID in the widget URL: 'https://widget.intercom.io/widget/omwicgvf'
+  (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/omwicgvf';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+  </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuBar = document.getElementById('menu-bar');
+            const sidebar = document.getElementById('sidebar');
+            const menuIcon = document.getElementById('menu-icon');
+
+            menuBar.addEventListener('click', function () {
+                sidebar.style.left = sidebar.style.left === '0px' ? '-250px' : '0px';
+                menuIcon.innerHTML = menuIcon.innerHTML === '☰' ? '✕' : '☰';
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #ccccff;
+        }
+
+        #header {
+            background-color: #ccccff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #logo {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 50%;
+           
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+      #logo img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center center; /* Center the image */
+      }
+        #site-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        #header-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .header-button {
+            background-color: #ccccff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        .header-button:hover {
+            background-color: #b3b3ff;
+        }
+    </style>
+
+
+
+
+ 
+
+  <style>
+    #site-title {
+      font-family: 'Arial', sans-serif;
+      font-size: 24px;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 2px solid #000; /* Adjust border color */
+      animation: typing 3s steps(40, end), popup 10s forwards;
+   
+  </style>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</head>
+<body>
+
+    <div id="header">
+        <div id="logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/4221/4221484.png" alt="Logo">
+        </div>
+        <div id="site-title">TopMovies</div>
+      <div id="header-buttons">
+        <div class="header-button" onclick="redirectToPremium()">
+            GET VIP
+        </div>
+
+        <script>
+            function redirectToPremium() {
+                // Replace window.location.href with the actual URL you want to redirect to
+                window.location.href = 'premium.html';
+            }
+        </script>
+
+          <div class="header-button">
+              WEBSERIES
+              <div class="dropdown">
+                  <button></button>
+                 <a href="netflix/netflix.html"> <button>NETFLIX</button></a>
+                  <button>Comedy</button>
+                  <button>Drama</button>
+                  <button>Fantasy</button>
+                  <button>Sci-Fi</button>
+                  <button>Thriller</button>
+              </div>
+          </div>
+          <div class="header-button">
+              TV Shows
+              <div class="dropdown">
+                  <button>Crime</button>
+                  <div class="dropdown">
+                      <button>UPCOMING...</button>
+                      <button>UPCOMING...</button>
+                      <button>UPCOMING...</button>
+                      <button>UPCOMING...</button>
+                      <button>UPCOMING...</button>
+                  </div>
+                  <button>Fantasy</button>
+                  <button>Mystery</button>
+                  <button>Sci-Fi</button>
+                  <button>Drama</button>
+                  <button>Comedy</button>
+                  <button>Documentary</button>
+              </div>
+          </div>
+      </div>
+    </div>
+
+</body>
+
+
+
+<style>
+    :root {
+        --theme-color: #ccccff;
+    }
+
+    #header-buttons {
+        display: flex;
+    }
+
+    .header-button {
+        position: relative;
+        margin-right: 10px;
+        padding: 10px;
+        cursor: pointer;
+        background-color: var(--theme-color);
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 4px 4px 8px rgba(204, 204, 204, 0.5), -4px -4px 8px rgba(255, 255, 255, 0.8);
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .header-button:hover {
+        box-shadow: 6px 6px 12px rgba(204, 204, 204, 0.8), -6px -6px 12px rgba(255, 255, 255, 0.8);
+    }
+
+    .dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #f9f9f9;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .header-button:hover .dropdown {
+        display: block;
+    }
+
+    .dropdown button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        text-align: left;
+        border: none;
+        background: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .dropdown button:hover {
+        background-color: #ddd;
+    }
+
+    /* Bubble Animation */
+    .bubble {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: var(--theme-color);
+        border-radius: 50%;
+        opacity: 0;
+        animation: bubbleAnimation 0.8s ease-out;
+    }
+
+    @keyframes bubbleAnimation {
+        0% {
+            transform: scale(0);
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            transform: scale(1.2);
+            opacity: 0;
+        }
+    }
+</style>
+<script>
+    function createBubble(event) {
+        const button = event.currentTarget;
+        const bubble = document.createElement('div');
+        bubble.className = 'bubble';
+        const rect = button.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+        bubble.style.left = `${x}px`;
+        bubble.style.top = `${y}px`;
+        button.appendChild(bubble);
+
+        // Remove the bubble element after the animation completes
+        bubble.addEventListener('animationend', () => {
+            bubble.remove();
+        });
+    }
+</script>
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <!-- Add your icon library link here if you're using one -->
+</head>
+<body>
+  <!-- Your main content goes here -->
+  <div id="context-menu" class="context-menu">
+    <button onclick="showAlert()">
+      <i class="icon">🌟</i>
+      Credits
+    </button>
+    <button onclick="shareOnWhatsApp()">
+      <i class="icon">📤</i>
+      Share
+    </button>
+    <button onclick="closeWindow()">
+      <i class="icon">❌</i>
+      Close
+    </button>
+    <button onclick="refreshWindow()">
+      <i class="icon">🔄</i>
+      Refresh
+    </button>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+<style>
+
+
+
+
+
+
+
+  body {
+    /* Your main content styles */
+  }
+
+  .context-menu {
+    position: absolute;
+    background-color: #ccccff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+
+  .context-menu button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 8px;
+    margin: 5px 0;
+    font-size: 16px;
+  }
+
+  .context-menu button:hover {
+    background-color: #e0e0e0;
+  }
+
+  .icon {
+    margin-right: 8px;
+    font-size: 20px;
+  }
+
+
+
+
+
+
+
+  
+</style>
+
+
+
+
+<script>
+
+
+
+
+
+  // Your script for handling button functionalities
+
+  function showAlert() {
+    alert("Made by Anshpreet");
+  }
+
+  function shareOnWhatsApp() {
+     const whatsappLink = "https://api.whatsapp.com/send?phone=+91&text=Download%20movies%20from%20here%20%3A-%20https%3A%2F%2Ftopmovies.anshpreet2442.repl.co%2F%23";
+
+      // Open WhatsApp with the predefined message and link
+      window.open(whatsappLink, '_blank');
+    }
+
+  function closeWindow() {
+    // Add your logic to close the window
+  }
+
+  function refreshWindow() {
+      location.reload();
+    }
+
+    // Automatically refresh the window after 2 minutes
+    setTimeout(refreshWindow, 120000000);
+
+  // Display the context menu on right-click
+  document.addEventListener('contextmenu', function (event) {
+    event.preventDefault();
+    const contextMenu = document.getElementById('context-menu');
+    contextMenu.style.top = `${event.clientY}px`;
+    contextMenu.style.left = `${event.clientX}px`;
+    contextMenu.style.display = 'block';
+  });
+
+  // Hide the context menu on click outside
+  document.addEventListener('click', function () {
+    const contextMenu = document.getElementById('context-menu');
+    contextMenu.style.display = 'none';
+  });
+
+
+
+
+
+
+  
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+      body {
+          margin: 0;
+          font-family: 'Arial', sans-serif;
+          background-color: #f4f4f4;
+          padding: 20px;
+      }
+
+      .video-container {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px;
+      }
+
+      .video-box {
+          width: 300px;
+          padding: 15px;
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          background-color: #fff;
+          margin-bottom: 20px;
+          transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .video-box:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .video-cover {
+          width: 100%;
+          height: 150px;
+          object-fit: cover;
+          border-radius: 8px;
+          margin-bottom: 10px;
+      }
+
+      .video-info {
+          font-size: 14px;
+          color: #555;
+      }
+  </style>
+</head>
+<body>
+
+ 
+ <a href="flixopedia-server/categories/fiction/godzilla/movie.html">  <div class="video-box"><img class="trending-video-cover" src="https://image.tmdb.org/t/p/w185/hkxxMIGaiCTmrEArK7J56JTKUlB.jpg" alt="Video Cover 1">
+         
+              <div class="trending-video-info">
+                  <h3>GODZILLA MINUS ONE</h3>
+                  <p><strong>Name:</strong> GODZILLA MINUS ONE</p>
+                  <p><strong>Size:</strong> 1gb</p>
+                  <p><strong>Release:</strong> NOVEMBER 3, 2023</p>
+                  <p><strong>Uploaded by:</strong> FLIXOPEDIA</p>
+              </div>
+          </a>
+          <div class="shine-animation"></div>
+          <div class="trending-text-container">
+              <div class="neon-glow">Trending</div>
+          </div>
+      </div>
+  </div>
+
+
+
+
+
+<style>
+
+  .trending-video-container {
+      position: relative;
+  }
+
+  .trending-video-box {
+      position: relative;
+  }
+
+  .trending-video-cover {
+      position: relative;
+      overflow: hidden;
+  }
+
+  .trending-video-cover {
+      position: relative;
+      overflow: hidden;
+  }
+
+  .trending-video-cover::before {
+      content: "";
+      position: absolute;
+      top: -10px; /* Adjust the position as needed */
+      left: -10px; /* Adjust the position as needed */
+      right: -10px; /* Adjust the position as needed */
+      bottom: -10px; /* Adjust the position as needed */
+      background: 
+          url('https://img.freepik.com/premium-photo/metallic-silver-surface-urban-textural-background_135785-502.jpg') center center/cover,
+          linear-gradient(to bottom, #00f0ff, #0066ff); /* Neon blue linear gradient */
+      border-radius: 10px;
+      z-index: -1; /* Behind the image */
+      box-shadow: 0 0 20px 10px rgba(0, 102, 255, 0.5); /* Neon blue shadow */
+  }
+
+
+  .trending-video-info {
+      /* Your existing styles for video info */
+  }
+
+  .shine-animation {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, #ffd700, #ffd700 50%, transparent 50%, transparent);
+      background-size: 200% 200%;
+      animation: shine 2s infinite;
+      z-index: -1; /* Move it to the background */
+  }
+
+  .trending-text-container {
+      position: absolute;
+      top: 10px; /* Adjust the position as needed */
+      right: 10px; /* Adjust the position as needed */
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+      border-radius: 5px;
+      z-index: 1; /* Place it above the shine animation */
+  }
+
+  .neon-glow {
+      color: #00ff00; /* Neon green color */
+      font-size: 16px;
+      font-weight: bold;
+      text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+  }
+
+  @keyframes shine {
+      to {
+          background-position: -200% -200%;
+      }
+
+
+
+
+
+
+
+  </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+       <a href="lucifer/lucifers6.html"> <div class="video-box">
+            <img class="video-cover" src="https://i.ibb.co/F0HZ5Rn/Screenshot-2023-12-02-185354.png" alt="Video Cover 2">
+            <div class="video-info">
+                <h3>LUCIFER S06</h3>
+                <p><strong>Name:</strong>LUCIFER [ NETFLIX ]</p>
+                <p><strong>Size:</strong> 5.6GB</p>
+                <p><strong>Release:</strong> JANUARY 15, 2016</p>
+                <p><strong>Uploaded by:</strong>FLIXOPEDIA </p>
+            </div></a>
+        </div>
+
+
+
+
+
+
+   <a href="error/index.html"> <div class="video-box">
+       <img class="video-cover" src="https://cdn.dribbble.com/users/140152/screenshots/10927749/loop-360-mobius-blue-v3-300dpi.png" alt="Video Cover 2">
+       <div class="video-info">
+           <h3>COMING SOON...</h3>
+           <p><strong>Name:</strong>[ NETFLIX ]</p>
+           <p><strong>Size:</strong> </p>
+           <p><strong>Release:</strong> -----</p>
+           <p><strong>Uploaded by:</strong>FLIXOPEDIA </p>
+       </div></a>
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+        <!-- Add more video boxes as needed -->
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<body>
+
+<div class="video-box" id="videoBox">
+  <img class="video-cover" src="https://resizing.flixster.com/glLK2u9Rx8oCwi6glzxMGeBk9WM=/206x305/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p17047574_b_v13_ab.jpg" alt="FLIXOPEDIA - YOUNG SHELDON">
+  <div class="video-info">
+    <h3>YOUNG SHELDON</h3>
+    <p><strong>Name:</strong> YOUNG SHELDON</p>
+    <p><strong>Size:</strong> ----</p>
+    <p><strong>Release:</strong> 2017</p>
+    <p><strong>Uploaded by:</strong> FLIXOPEDIA</p>
+  </div>
+</div>
+
+<div class="popup-container" id="popupContainer">
+  <div class="popup-box">
+    <span class="close-btn" onclick="closePopup()">X</span>
+    <h2>Subscribe to YOUNG SHELDON</h2>
+    <p>Click below to buy a subscription and enjoy the content!</p>
+    <button class="neumorphism-btn" onclick="openPayment1()">Buy Subscription</button>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Add more video boxes as needed -->
+
+    <div class="video-box">
+     <a href="the-sheros/the-sheros.html">   <img class="video-cover" src="https://m.media-amazon.com/images/M/MV5BMTlhNTk4ZjQtZDQ4Yi00ODlkLTliNmEtY2U0ZDE5ZWVhY2M1XkEyXkFqcGdeQXVyNTI4OTEyMjA@._V1_FMjpg_UX1000_.jpg" alt="FLIXOPEDIA "></a>
+        <div class="video-info">
+            <h3>Sheroes</h3>
+            <p><strong>Name:</strong> Sheroes  </p>
+            <p><strong>Size:</strong>1.93GB </p>
+            <p><strong>Release:</strong> 2023  </p>
+            <p><strong>Uploaded by:</strong> FLIXOPEDIA</p>
+        </div>
+    </div>
+
+<!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+<!-- Add more video boxes as needed -->
+
+    <div class="video-box">
+      <a href="flixopedia-server/categories/romance/comedy/tiku-weds-sheru/tiku-weds-sheru.html"  <img class="video-cover" src="https://upload.wikimedia.org/wikipedia/en/3/3d/Poster_of_Tiku_Weds_Sheru.jpg" alt="FLIXOPEDIA ">
+        <div class="video-info">
+            <h3>TIKU WEDS SHERU</h3>
+            <p><strong>Name:</strong> TIKU WEDS SHERU  </p>
+            <p><strong>Size:</strong> 1.6GB </p>
+            <p><strong>Release:</strong> 2023 </p>
+            <p><strong>Uploaded by:</strong> ANSHPREET</p>
+        </div>
+    </div></a>
+
+<!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Add more video boxes as needed -->
+
+    <div class="video-box">
+      <a href="flixopedia-server/categories/drama/kadak-singh/kadaksingh.html">  <img class="video-cover" src="https://image.tmdb.org/t/p/w185/eB7VUbPWvbohPvmYn22XAtpmcvU.jpg" alt="FLIXOPEDIA ">
+        <div class="video-info">
+            <h3> Kadak Singh</h3>
+            <p><strong>Name:</strong>  Kadak Singh  </p>
+            <p><strong>Size:</strong> 1GB </p>
+            <p><strong>Release:</strong> 2023  </p>
+            <p><strong>Uploaded by:</strong> anshpreet24 </p>
+        </div>
+    </div></a>
+
+<!-- Add more video boxes as needed -->
+
+
+
+
+
+  <style>
+    ::selection {
+      background-color: #ffb6c1; /* Soft pink color */
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.addEventListener('selectionchange', function() {
+        var selectedText = getSelectedText();
+        if (selectedText) {
+          document.execCommand('BackColor', false, '#ffb6c1'); // Set background color to soft pink
+        }
+      });
+
+      function getSelectedText() {
+        var text = '';
+        if (window.getSelection) {
+          text = window.getSelection().toString();
+        } else if (document.selection && document.selection.type != 'Control') {
+          text = document.selection.createRange().text;
+        }
+        return text;
+      }
+    });
+  </script>
+
+
+
+
+
+<!-- Add more video boxes as needed -->
+
+   <a href="https://topmovies.anshpreet2442.repl.co/flixopedia-server/categories/drama/kaala-pani/kaalapani.html"> <div class="video-box">
+        <img class="video-cover" src="https://image.tmdb.org/t/p/w185/EQmoiwsUKbc1K6TDZlJKEJvZKW.jpg" alt="FLIXOPEDIA ">
+        <div class="video-info">
+            <h3>KAALA PAANI 2023</h3>
+            <p><strong>Name:</strong>KAALA PAANI </p>
+            <p><strong>Size:</strong> 3.67GB </p>
+            <p><strong>Release:</strong>2023  </p>
+            <p><strong>Uploaded by:</strong> ANSHPREET </p>
+        </div>
+    </div>
+   </a>
+<!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Add more video boxes as needed -->
+
+  <a href="flixopedia-server/categories/UNCATEGORISED/DUNKI.html"><div class="video-box">
+      <img class="video-cover" src="https://akm-img-a-in.tosshub.com/indiatoday/images/breaking_news/202312/dunki-shah-rukh-khan-215124888-16x9_0.jpeg?VersionId=9cbOIX29fpy2EyOtzhspNvmdWk7ftE2y" alt="FLIXOPEDIA">
+      <div class="video-info">
+          <h3>DUNKI</h3>
+          <p><strong>Name:</strong> DUNKI </p>
+          <p><strong>Size:</strong>1.2GB </p>
+          <p><strong>Release:</strong> 21 DECEMBER 2023 </p>
+          <p><strong>Uploaded by:</strong> ANSHPREET </p>
+   
+      </div></a>
+  </div>
+
+
+<!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Add more video boxes as needed -->
+
+    <div class="video-box">
+      <a href="netflix/webseries/whatif/index.html">  <img class="video-cover" src="https://img.etimg.com/thumb/width-1600,height-900,imgsize-2080078,resizemode-75,msid-105242088/news/international/us/what-if-season-2-release-date-trailer-and-everything-else-you-need-to-know.jpg" alt="FLIXOPEDIA "></a>
+        <div class="video-info">
+            <h3>WHAT IF</h3>
+            <p><strong>Name:</strong> WHAT IF  </p>
+            <p><strong>Size:</strong>1.51GB [ZIP FILE] </p>
+            <p><strong>Release:</strong> 2021-2023  </p>
+            <p><strong>Uploaded by:</strong>  <button type="button" class="custom-btn btn-11">ANSHPREET</button> </p>
+        </div>
+    </div>
+
+<!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Add more video boxes as needed -->
+
+    <div class="video-box">
+     <a href="flixopedia-server/categories/amurderatend/amurderatendofworld.html">   <img class="video-cover" src="https://www.themoviedb.org/t/p/original/mF8inYyAQ9pNs9c8nMxznjUUZMa.jpg" alt="FLIXOPEDIA "></a>
+        <div class="video-info">
+            <h3>A.Murder.At.The.End.Of.The.World.S01.720p x264</h3>
+            <p><strong>Name:</strong>A.Murder.At.The.End.Of.The.World.S01.720p x264  </p>
+            <p><strong>Size:</strong> 3.29gb/zip file </p>
+            <p><strong>Release:</strong> ----------  </p>
+            <p><strong>Uploaded by:</strong> anshpreet </p>
+        </div>
+    </div>
+
+<!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Add more video boxes as needed -->
+
+    <div class="video-box">
+    <a href="flixopedia-server/categories/Harrypotter/allmovies.html">    <img class="video-cover" src="https://www.smifslimited.com/wp-content/uploads/2023/09/harry-potter.png" alt="FLIXOPEDIA "></a>
+        <div class="video-info">
+            <h3>HARRY POTTER </h3>
+            <p><strong>Name:</strong> HARRY POTTER  </p>
+            <p><strong>Size:</strong> ----- </p>
+            <p><strong>Release:</strong> ----------  </p>
+            <p><strong>Uploaded by:</strong>ANSHPREET </p>
+        </div>
+    </div>
+
+<!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Add more video boxes as needed -->
+
+    <div class="video-box">
+        <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+        <div class="video-info">
+            <h3>COMING SOON...</h3>
+            <p><strong>Name:</strong> -------  </p>
+            <p><strong>Size:</strong> ----- </p>
+            <p><strong>Release:</strong> ----------  </p>
+            <p><strong>Uploaded by:</strong> ------- </p>
+        </div>
+    </div>
+
+<!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Add more video boxes as needed -->
+
+    <div class="video-box">
+        <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+        <div class="video-info">
+            <h3>COMING SOON...</h3>
+            <p><strong>Name:</strong> -------  </p>
+            <p><strong>Size:</strong> ----- </p>
+            <p><strong>Release:</strong> ----------  </p>
+            <p><strong>Uploaded by:</strong> ------- </p>
+        </div>
+    </div>
+
+<!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Add more video boxes as needed -->
+
+    <div class="video-box">
+        <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+        <div class="video-info">
+            <h3>COMING SOON...</h3>
+            <p><strong>Name:</strong> -------  </p>
+            <p><strong>Size:</strong> ----- </p>
+            <p><strong>Release:</strong> ----------  </p>
+            <p><strong>Uploaded by:</strong> ------- </p>
+        </div>
+    </div>
+
+<!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Add more video boxes as needed -->
+
+    <div class="video-box">
+        <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+        <div class="video-info">
+            <h3>COMING SOON...</h3>
+            <p><strong>Name:</strong> -------  </p>
+            <p><strong>Size:</strong> ----- </p>
+            <p><strong>Release:</strong> ----------  </p>
+            <p><strong>Uploaded by:</strong> ------- </p>
+        </div>
+    </div>
+
+<!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Add more video boxes as needed -->
+
+    <div class="video-box">
+        <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+        <div class="video-info">
+            <h3>COMING SOON...</h3>
+            <p><strong>Name:</strong> -------  </p>
+            <p><strong>Size:</strong> ----- </p>
+            <p><strong>Release:</strong> ----------  </p>
+            <p><strong>Uploaded by:</strong> ------- </p>
+        </div>
+    </div>
+
+<!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Add more video boxes as needed -->
+
+    <div class="video-box">
+        <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+        <div class="video-info">
+            <h3>COMING SOON...</h3>
+            <p><strong>Name:</strong> -------  </p>
+            <p><strong>Size:</strong> ----- </p>
+            <p><strong>Release:</strong> ----------  </p>
+            <p><strong>Uploaded by:</strong> ------- </p>
+        </div>
+    </div>
+
+<!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Add more video boxes as needed -->
+
+    <div class="video-box">
+        <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+        <div class="video-info">
+            <h3>COMING SOON...</h3>
+            <p><strong>Name:</strong> -------  </p>
+            <p><strong>Size:</strong> ----- </p>
+            <p><strong>Release:</strong> ----------  </p>
+            <p><strong>Uploaded by:</strong> ------- </p>
+        </div>
+    </div>
+
+<!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Add more video boxes as needed -->
+
+    <div class="video-box">
+        <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+        <div class="video-info">
+            <h3>COMING SOON...</h3>
+            <p><strong>Name:</strong> -------  </p>
+            <p><strong>Size:</strong> ----- </p>
+            <p><strong>Release:</strong> ----------  </p>
+            <p><strong>Uploaded by:</strong> ------- </p>
+        </div>
+    </div>
+
+<!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Add more video boxes as needed -->
+
+    <div class="video-box">
+        <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+        <div class="video-info">
+            <h3>COMING SOON...</h3>
+            <p><strong>Name:</strong> -------  </p>
+            <p><strong>Size:</strong> ----- </p>
+            <p><strong>Release:</strong> ----------  </p>
+            <p><strong>Uploaded by:</strong> ------- </p>
+        </div>
+    </div>
+
+<!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Add more video boxes as needed -->
+
+    <div class="video-box">
+        <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+        <div class="video-info">
+            <h3>COMING SOON...</h3>
+            <p><strong>Name:</strong> -------  </p>
+            <p><strong>Size:</strong> ----- </p>
+            <p><strong>Release:</strong> ----------  </p>
+            <p><strong>Uploaded by:</strong> ------- </p>
+        </div>
+    </div>
+
+<!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Add more video boxes as needed -->
+
+    <div class="video-box">
+        <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+        <div class="video-info">
+            <h3>COMING SOON...</h3>
+            <p><strong>Name:</strong> -------  </p>
+            <p><strong>Size:</strong> ----- </p>
+            <p><strong>Release:</strong> ----------  </p>
+            <p><strong>Uploaded by:</strong> ------- </p>
+        </div>
+    </div>
+
+<!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Add more video boxes as needed -->
+
+    <div class="video-box">
+        <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+        <div class="video-info">
+            <h3>COMING SOON...</h3>
+            <p><strong>Name:</strong> -------  </p>
+            <p><strong>Size:</strong> ----- </p>
+            <p><strong>Release:</strong> ----------  </p>
+            <p><strong>Uploaded by:</strong> ------- </p>
+        </div>
+    </div>
+
+<!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Add more video boxes as needed -->
+
+    <div class="video-box">
+        <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+        <div class="video-info">
+            <h3>COMING SOON...</h3>
+            <p><strong>Name:</strong> -------  </p>
+            <p><strong>Size:</strong> ----- </p>
+            <p><strong>Release:</strong> ----------  </p>
+            <p><strong>Uploaded by:</strong> ------- </p>
+        </div>
+    </div>
+
+<!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Add more video boxes as needed -->
+
+    <div class="video-box">
+        <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+        <div class="video-info">
+            <h3>COMING SOON...</h3>
+            <p><strong>Name:</strong> -------  </p>
+            <p><strong>Size:</strong> ----- </p>
+            <p><strong>Release:</strong> ----------  </p>
+            <p><strong>Uploaded by:</strong> ------- </p>
+        </div>
+    </div>
+
+<!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Add more video boxes as needed -->
+
+      <div class="video-box">
+          <img class="video-cover" src="https://lh3.googleusercontent.com/-9zTC2xb6glo/YNKn7ZomFMI/AAAAAAAAAC0/UVh_FDYCS00OuR9FcTZ16mA3kmPuTrMBQCLcBGAsYHQ/s1600/1624418281975225-0.png" alt="FLIXOPEDIA ">
+          <div class="video-info">
+              <h3>COMING SOON...</h3>
+              <p><strong>Name:</strong> -------  </p>
+              <p><strong>Size:</strong> ----- </p>
+              <p><strong>Release:</strong> ----------  </p>
+              <p><strong>Uploaded by:</strong> ------- </p>
+          </div>
+      </div>
+
+  <!-- Add more video boxes as needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+  body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+  }
+
+  #notification {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      text-align: center;
+      padding: 10px;
+  }
+</style>
+</head>
+<body>
+<!-- Your webpage content goes here -->
+
+<!-- Notification box -->
+<div id="notification">You are back to Homepage &#1421; </div>
+
+<script>
+  // Check if the URL contains the specified string
+  if (window.location.href.includes("https://topmovies.anshpreet2442.repl.co/#homepage")) {
+      // Show the notification box
+      document.getElementById("notification").style.display = "block";
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating Box</title>
+    <style>
+        #floatingBox {
+            display: none;
+            position: fixed;
+            bottom: 0; /* Updated to bottom */
+            right: 0; /* Updated to right */
+            padding: 20px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            z-index: 1000;
+            max-width: 80%;
+            max-height: 80%;
+            overflow: hidden;
+        }
+
+        #draggable {
+            cursor: move;
+            user-select: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #fullscreenBtn, #closeBtn {
+            cursor: pointer;
+            padding: 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="floatingBox">
+    <div id="draggable">
+        <button id="fullscreenBtn" onclick="toggleFullscreen()">Fullscreen</button>
+        <button id="closeBtn" onclick="closeFloatingBox()">Close</button>
+    </div>
+    <!-- Your content goes here -->
+    <iframe src="https://player.vdocipher.com/v2/?otp=20160313versASE323pYMWZ0PaukBxgpOfaEKbCO6NIy9dt3bOPaKPCepDNCUR1K&playbackInfo=eyJ2aWRlb0lkIjoiYTliYzI4ZTNkZGE1NDBiMWI4N2E5MmJlY2NkMmNiOGEifQ==" style="border:0; max-width:100%; height: calc(100% - 40px);" allowFullScreen="true" allow="encrypted-media"></iframe>
+</div>
+
+<script>
+    var idleTimer;
+    var idleTime = 15000; // 15 seconds
+
+    // Set up an event listener for mousemove
+    document.addEventListener('mousemove', resetIdleTimer);
+
+    function resetIdleTimer() {
+        // Clear the existing timeout
+        clearTimeout(idleTimer);
+
+        // Set a new timeout
+        idleTimer = setTimeout(showFloatingBox, idleTime);
+    }
+
+    function showFloatingBox() {
+        // Display the floating box
+        document.getElementById("floatingBox").style.display = "block";
+
+        // Make the floating box draggable
+        dragElement(document.getElementById("floatingBox"));
+    }
+
+    function dragElement(elmnt) {
+        // ... (same as before)
+    }
+
+    function toggleFullscreen() {
+        var element = document.getElementById("floatingBox");
+        if (element.requestFullscreen) {
+            element.requestFullscreen();
+        } else if (element.mozRequestFullScreen) {
+            element.mozRequestFullScreen();
+        } else if (element.webkitRequestFullscreen) {
+            element.webkitRequestFullscreen();
+        } else if (element.msRequestFullscreen) {
+            element.msRequestFullscreen();
+        }
+    }
+
+    function closeFloatingBox() {
+        document.getElementById("floatingBox").style.display = "none";
+    }
+</script>
+
+</body>
+</html>
+<style>
+
+
+    .video-box:hover .video-info {
+      opacity: 1;
+    }
+
+    .popup-container {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+    }
+
+    .popup-box {
+      background: #ccccff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+      width: 80%;
+      max-width: 400px;
+      text-align: center;
+      position: relative;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+
+    .neumorphism-btn {
+      background: #ccccff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      cursor: pointer;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('videoBox').addEventListener('click', function() {
+      openPopup();
+    });
+  });
+
+  function openPopup() {
+    document.getElementById('popupContainer').style.display = 'flex';
+  }
+
+  function closePopup() {
+    document.getElementById('popupContainer').style.display = 'none';
+  }
+
+  function openPayment1() {
+    // Redirect to UPI payment with specified details
+    window.location.href = 'upi://pay?pa=kaur109@paytm&mc=YoungSheldons6&tid=123&tn=Subscription&am=50&cu=INR';
+  }
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Start of Tawk.to Script -->
+    <script type="text/javascript">
+      var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+      (function () {
+        var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = "https://embed.tawk.to/656e9431bfb79148e59a24af/default";
+        s1.charset = "UTF-8";
+        s1.setAttribute("crossorigin", "*");
+        s0.parentNode.insertBefore(s1, s0);
+
+        // Function to hide the Tawk.to widget after 15 seconds
+        setTimeout(function () {
+          Tawk_API.hideWidget();
+        }, 15000); // 15 seconds in milliseconds
+      })();
+    </script>
+    <!-- End of Tawk.to Script -->
+
+
+
+
+
+  
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Donation Popup</title>
+      <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+        }
+
+        .popup {
+          display: none;
+          position: fixed;
+          bottom: 20px; /* Adjust as needed */
+          left: 20px; /* Adjust as needed */
+          width: 100%;
+          max-width: 400px;
+          background: rgba(0, 0, 0, 0.7);
+          justify-content: center;
+          align-items: flex-start;
+          overflow-y: auto;
+          box-sizing: border-box;
+          z-index: 999; /* Ensure it's above other elements */
+        }
+
+        .popup-content {
+          background: #fff;
+          padding: 20px;
+          border-radius: 10px;
+          text-align: center;
+        }
+
+        .close-btn {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          cursor: pointer;
+        }
+
+        .donation-btn {
+          display: inline-block;
+          padding: 10px 20px;
+          margin: 10px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          color: #fff;
+        }
+
+        /* ... (your existing code for donation button styles) ... */
+
+        .donate-image {
+          position: fixed;
+          bottom: 20px;
+          left: 20px;
+          cursor: pointer;
+          width: 50px;
+          height: auto;
+          z-index: 1000; /* Ensure it's above other elements */
+        }
+      </style>
+
+    </head>
+    <body>
+
+    <!-- Donation Popup -->
+      <div id="donationPopup" class="popup">
+        <div class="popup-content">
+          <span class="close-btn" onclick="closePopup()">X</span>
+          <h2>Select Donation Amount</h2>
+          <label><input type="checkbox" class="donation-checkbox" value="25" onclick="handleCheckboxClick(this)"> Rs 25</label>
+          <label><input type="checkbox" class="donation-checkbox" value="50" onclick="handleCheckboxClick(this)"> Rs 50</label>
+          <label><input type="checkbox" class="donation-checkbox" value="85" onclick="handleCheckboxClick(this)"> Rs 85</label>
+          <label><input type="checkbox" class="donation-checkbox" value="100" onclick="handleCheckboxClick(this)"> Rs 100</label>
+          <label><input type="checkbox" class="donation-checkbox" value="200" onclick="handleCheckboxClick(this)"> Rs 200</label>
+          <label><input type="checkbox" class="donation-checkbox" value="400" onclick="handleCheckboxClick(this)"> Rs 400</label>
+          <h3>Donation Privileges:</h3>
+          <p>For amounts over Rs 500, you will receive special privileges, including early access to videos and notifications via SMS and email.</p>
+          <form id="upiForm" style="display: inline-block;">
+            <input type="hidden" id="selectedAmount" name="amount">
+            <button type="button" class="custom-btn btn-11" onclick="submitUPIForm()">Donate Now</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Donation Image Button -->
+      <img class="donate-image" src="https://cdn-icons-png.flaticon.com/512/9908/9908271.png" alt="Donate" onclick="openPopup()">
+
+      <script>
+        function openPopup() {
+          document.getElementById("donationPopup").style.display = "flex";
+        }
+
+        function closePopup() {
+          document.getElementById("donationPopup").style.display = "none";
+        }
+
+        function handleCheckboxClick(checkbox) {
+          // Uncheck other checkboxes
+          var checkboxes = document.querySelectorAll('.donation-checkbox');
+          checkboxes.forEach(function (cb) {
+            if (cb !== checkbox) {
+              cb.checked = false;
+            }
+          });
+
+          // Update the selected amount
+          document.getElementById("selectedAmount").value = checkbox.checked ? checkbox.value : '';
+        }
+
+        function submitUPIForm() {
+          var selectedAmount = getSelectedAmount();
+          if (selectedAmount) {
+            // Replace 'kaur108@paytm' with the actual UPI ID
+            var upiId = 'kaur109@paytm';
+            var amount = selectedAmount;
+            var paymentLink = "upi://pay?pa=" + upiId + "&pn=Anshpreet Singh&mc=123456&tid=123456&tr=123456&tn=Payment%20to%20Anshpreet%20Singh&am=" + amount + "&cu=INR";
+
+            window.location.href = paymentLink;
+          } else {
+            alert("Please select a donation amount.");
+          }
+        }
+
+        function getSelectedAmount() {
+          var checkboxes = document.querySelectorAll('.donation-checkbox:checked');
+          if (checkboxes.length > 0) {
+            return checkboxes[0].value;
+          } else {
+            return null;
+          }
+        }
+      </script>
+
+    </body>
+    </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: auto;
+        }
+
+        #floating-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(to right, #301934, #ccccff);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: background 0.5s ease-in-out, right 0.5s ease-in-out;
+            z-index: 1000;
+        }
+
+        #floating-button:hover {
+            background: linear-gradient(to right, #ccccff, #301934);
+            right: 30px;
+        }
+
+        #count-bubble {
+            background: #ff5252;
+            color: white;
+            border-radius: 50%;
+            padding: 5px 10px;
+            font-size: 12px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+  <a href="https://forms.gle/ggV4pCXJcZqTQZpw5">  <a id="floating-button" >
+        Request
+        <div id="count-bubble">0</div>
+    </a>
+
+    <script>
+        var clickCount = 0;
+        var floatingButton = document.getElementById('floating-button');
+        var countBubble = document.getElementById('count-bubble');
+
+        floatingButton.addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent default behavior of the link
+            clickCount++;
+            countBubble.textContent = clickCount;
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+     
+
+
+
+
+
+
+
+  <script>
+      // Function to get the referrer URL
+      function getReferrer() {
+          return document.referrer.toLowerCase();
+      }
+
+      // Function to check if the referrer URL matches the specified URL
+      function isReferrerValid() {
+          var validReferrer = "https://etus.link/topmovies/#madebyansh";
+          return getReferrer() === validReferrer;
+      }
+
+      // Function to display a message based on the referrer
+      function displayMessage() {
+          if (isReferrerValid()) {
+              alert("Hey, Thanks! We have received your form, and we will soon upload it here. Please keep patience until then.");
+          }
+      }
+
+      // Call the displayMessage function when the page loads
+      window.onload = displayMessage;
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+
+
+
+
+
+  button {
+    margin: 20px;
+  }
+  .custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+
+  /* 1 */
+  .btn-1 {
+    background: rgb(6,14,131);
+    background: linear-gradient(0deg, rgba(6,14,131,1) 0%, rgba(12,25,180,1) 100%);
+    border: none;
+  }
+  .btn-1:hover {
+     background: rgb(0,3,255);
+  background: linear-gradient(0deg, rgba(0,3,255,1) 0%, rgba(2,126,251,1) 100%);
+  }
+
+  /* 2 */
+  .btn-2 {
+    background: rgb(96,9,240);
+    background: linear-gradient(0deg, rgba(96,9,240,1) 0%, rgba(129,5,240,1) 100%);
+    border: none;
+
+  }
+  .btn-2:before {
+    height: 0%;
+    width: 2px;
+  }
+  .btn-2:hover {
+    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+                -4px -4px 6px 0 rgba(116, 125, 136, .5), 
+      inset -4px -4px 6px 0 rgba(255,255,255,.2),
+      inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+  }
+
+
+
+  /* 3 */
+  .btn-3 {
+    background: rgb(0,172,238);
+  background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+
+  }
+  .btn-3 span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .btn-3:before,
+  .btn-3:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+     background: rgba(2,126,251,1);
+    transition: all 0.3s ease;
+  }
+  .btn-3:before {
+    height: 0%;
+    width: 2px;
+  }
+  .btn-3:after {
+    width: 0%;
+    height: 2px;
+  }
+  .btn-3:hover{
+     background: transparent;
+    box-shadow: none;
+  }
+  .btn-3:hover:before {
+    height: 100%;
+  }
+  .btn-3:hover:after {
+    width: 100%;
+  }
+  .btn-3 span:hover{
+     color: rgba(2,126,251,1);
+  }
+  .btn-3 span:before,
+  .btn-3 span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+     background: rgba(2,126,251,1);
+    transition: all 0.3s ease;
+  }
+  .btn-3 span:before {
+    width: 2px;
+    height: 0%;
+  }
+  .btn-3 span:after {
+    width: 0%;
+    height: 2px;
+  }
+  .btn-3 span:hover:before {
+    height: 100%;
+  }
+  .btn-3 span:hover:after {
+    width: 100%;
+  }
+
+  /* 4 */
+  .btn-4 {
+    background-color: #4dccc6;
+  background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+    line-height: 42px;
+    padding: 0;
+    border: none;
+  }
+  .btn-4:hover{
+    background-color: #89d8d3;
+  background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
+  }
+  .btn-4 span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .btn-4:before,
+  .btn-4:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+     box-shadow:  4px 4px 6px 0 rgba(255,255,255,.9),
+                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+      inset -4px -4px 6px 0 rgba(255,255,255,.9),
+      inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+    transition: all 0.3s ease;
+  }
+  .btn-4:before {
+    height: 0%;
+    width: .1px;
+  }
+  .btn-4:after {
+    width: 0%;
+    height: .1px;
+  }
+  .btn-4:hover:before {
+    height: 100%;
+  }
+  .btn-4:hover:after {
+    width: 100%;
+  }
+  .btn-4 span:before,
+  .btn-4 span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.9),
+                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+      inset -4px -4px 6px 0 rgba(255,255,255,.9),
+      inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+    transition: all 0.3s ease;
+  }
+  .btn-4 span:before {
+    width: .1px;
+    height: 0%;
+  }
+  .btn-4 span:after {
+    width: 0%;
+    height: .1px;
+  }
+  .btn-4 span:hover:before {
+    height: 100%;
+  }
+  .btn-4 span:hover:after {
+    width: 100%;
+  }
+
+  /* 5 */
+  .btn-5 {
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    background: rgb(255,27,0);
+  background: linear-gradient(0deg, rgba(255,27,0,1) 0%, rgba(251,75,2,1) 100%);
+  }
+  .btn-5:hover {
+    color: #f0094a;
+    background: transparent;
+     box-shadow:none;
+  }
+  .btn-5:before,
+  .btn-5:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #f0094a;
+    box-shadow:
+     -1px -1px 5px 0px #fff,
+     7px 7px 20px 0px #0003,
+     4px 4px 5px 0px #0002;
+    transition:400ms ease all;
+  }
+  .btn-5:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  .btn-5:hover:before,
+  .btn-5:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+
+
+  /* 6 */
+  .btn-6 {
+    background: rgb(247,150,192);
+  background: radial-gradient(circle, rgba(247,150,192,1) 0%, rgba(118,174,241,1) 100%);
+    line-height: 42px;
+    padding: 0;
+    border: none;
+  }
+  .btn-6 span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .btn-6:before,
+  .btn-6:after {
+    position: absolute;
+    content: "";
+    height: 0%;
+    width: 1px;
+   box-shadow:
+     -1px -1px 20px 0px rgba(255,255,255,1),
+     -4px -4px 5px 0px rgba(255,255,255,1),
+     7px 7px 20px 0px rgba(0,0,0,.4),
+     4px 4px 5px 0px rgba(0,0,0,.3);
+  }
+  .btn-6:before {
+    right: 0;
+    top: 0;
+    transition: all 500ms ease;
+  }
+  .btn-6:after {
+    left: 0;
+    bottom: 0;
+    transition: all 500ms ease;
+  }
+  .btn-6:hover{
+    background: transparent;
+    color: #76aef1;
+    box-shadow: none;
+  }
+  .btn-6:hover:before {
+    transition: all 500ms ease;
+    height: 100%;
+  }
+  .btn-6:hover:after {
+    transition: all 500ms ease;
+    height: 100%;
+  }
+  .btn-6 span:before,
+  .btn-6 span:after {
+    position: absolute;
+    content: "";
+    box-shadow:
+     -1px -1px 20px 0px rgba(255,255,255,1),
+     -4px -4px 5px 0px rgba(255,255,255,1),
+     7px 7px 20px 0px rgba(0,0,0,.4),
+     4px 4px 5px 0px rgba(0,0,0,.3);
+  }
+  .btn-6 span:before {
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: .5px;
+    transition: all 500ms ease;
+  }
+  .btn-6 span:after {
+    right: 0;
+    bottom: 0;
+    width: 0%;
+    height: .5px;
+    transition: all 500ms ease;
+  }
+  .btn-6 span:hover:before {
+    width: 100%;
+  }
+  .btn-6 span:hover:after {
+    width: 100%;
+  }
+
+  /* 7 */
+  .btn-7 {
+  background: linear-gradient(0deg, rgba(255,151,0,1) 0%, rgba(251,75,2,1) 100%);
+    line-height: 42px;
+    padding: 0;
+    border: none;
+  }
+  .btn-7 span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .btn-7:before,
+  .btn-7:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    background: rgba(251,75,2,1);
+    box-shadow:
+     -7px -7px 20px 0px rgba(255,255,255,.9),
+     -4px -4px 5px 0px rgba(255,255,255,.9),
+     7px 7px 20px 0px rgba(0,0,0,.2),
+     4px 4px 5px 0px rgba(0,0,0,.3);
+    transition: all 0.3s ease;
+  }
+  .btn-7:before{
+     height: 0%;
+     width: 2px;
+  }
+  .btn-7:after {
+    width: 0%;
+    height: 2px;
+  }
+  .btn-7:hover{
+    color: rgba(251,75,2,1);
+    background: transparent;
+  }
+  .btn-7:hover:before {
+    height: 100%;
+  }
+  .btn-7:hover:after {
+    width: 100%;
+  }
+  .btn-7 span:before,
+  .btn-7 span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    background: rgba(251,75,2,1);
+    box-shadow:
+     -7px -7px 20px 0px rgba(255,255,255,.9),
+     -4px -4px 5px 0px rgba(255,255,255,.9),
+     7px 7px 20px 0px rgba(0,0,0,.2),
+     4px 4px 5px 0px rgba(0,0,0,.3);
+    transition: all 0.3s ease;
+  }
+  .btn-7 span:before {
+    width: 2px;
+    height: 0%;
+  }
+  .btn-7 span:after {
+    height: 2px;
+    width: 0%;
+  }
+  .btn-7 span:hover:before {
+    height: 100%;
+  }
+  .btn-7 span:hover:after {
+    width: 100%;
+  }
+
+  /* 8 */
+  .btn-8 {
+    background-color: #f0ecfc;
+  background-image: linear-gradient(315deg, #f0ecfc 0%, #c797eb 74%);
+    line-height: 42px;
+    padding: 0;
+    border: none;
+  }
+  .btn-8 span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .btn-8:before,
+  .btn-8:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    background: #c797eb;
+    /*box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+      inset -4px -4px 6px 0 rgba(255,255,255,.5),
+      inset 4px 4px 6px 0 rgba(116, 125, 136, .3);*/
+    transition: all 0.3s ease;
+  }
+  .btn-8:before{
+     height: 0%;
+     width: 2px;
+  }
+  .btn-8:after {
+    width: 0%;
+    height: 2px;
+  }
+  .btn-8:hover:before {
+    height: 100%;
+  }
+  .btn-8:hover:after {
+    width: 100%;
+  }
+  .btn-8:hover{
+    background: transparent;
+  }
+  .btn-8 span:hover{
+    color: #c797eb;
+  }
+  .btn-8 span:before,
+  .btn-8 span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    background: #c797eb;
+    /*box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+      inset -4px -4px 6px 0 rgba(255,255,255,.5),
+      inset 4px 4px 6px 0 rgba(116, 125, 136, .3);*/
+    transition: all 0.3s ease;
+  }
+  .btn-8 span:before {
+    width: 2px;
+    height: 0%;
+  }
+  .btn-8 span:after {
+    height: 2px;
+    width: 0%;
+  }
+  .btn-8 span:hover:before {
+    height: 100%;
+  }
+  .btn-8 span:hover:after {
+    width: 100%;
+  }
+
+
+  /* 9 */
+  .btn-9 {
+    border: none;
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+  .btn-9:after {
+    position: absolute;
+    content: " ";
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+     background-color: #1fd1f9;
+  background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+    transition: all 0.3s ease;
+  }
+  .btn-9:hover {
+    background: transparent;
+    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+      inset -4px -4px 6px 0 rgba(255,255,255,.5),
+      inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+    color: #fff;
+  }
+  .btn-9:hover:after {
+    -webkit-transform: scale(2) rotate(180deg);
+    transform: scale(2) rotate(180deg);
+    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+      inset -4px -4px 6px 0 rgba(255,255,255,.5),
+      inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+  }
+
+  /* 10 */
+  .btn-10 {
+    background: rgb(22,9,240);
+  background: linear-gradient(0deg, rgba(22,9,240,1) 0%, rgba(49,110,244,1) 100%);
+    color: #fff;
+    border: none;
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+  .btn-10:after {
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+    -webkit-transform: scale(.1);
+    transform: scale(.1);
+  }
+  .btn-10:hover {
+    color: #fff;
+    border: none;
+    background: transparent;
+  }
+  .btn-10:hover:after {
+    background: rgb(0,3,255);
+  background: linear-gradient(0deg, rgba(2,126,251,1) 0%,  rgba(0,3,255,1)100%);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  /* 11 */
+  .btn-11 {
+    border: none;
+    background: rgb(251,33,117);
+      background: linear-gradient(0deg, rgba(251,33,117,1) 0%, rgba(234,76,137,1) 100%);
+      color: #fff;
+      overflow: hidden;
+  }
+  .btn-11:hover {
+      text-decoration: none;
+      color: #fff;
+  }
+  .btn-11:before {
+      position: absolute;
+      content: '';
+      display: inline-block;
+      top: -180px;
+      left: 0;
+      width: 30px;
+      height: 100%;
+      background-color: #fff;
+      animation: shiny-btn1 3s ease-in-out infinite;
+  }
+  .btn-11:hover{
+    opacity: .7;
+  }
+  .btn-11:active{
+    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+      inset -4px -4px 6px 0 rgba(255,255,255,.2),
+      inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+  }
+
+
+  @-webkit-keyframes shiny-btn1 {
+      0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+      80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
+      81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
+      100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
+  }
+
+
+  /* 12 */
+  .btn-12{
+    position: relative;
+    right: 20px;
+    bottom: 20px;
+    border:none;
+    box-shadow: none;
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    -webkit-perspective: 230px;
+    perspective: 230px;
+  }
+  .btn-12 span {
+    background: rgb(0,172,238);
+  background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+    display: block;
+    position: absolute;
+    width: 130px;
+    height: 40px;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    border-radius: 5px;
+    margin:0;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+  }
+  .btn-12 span:nth-child(1) {
+    box-shadow:
+     -7px -7px 20px 0px #fff9,
+     -4px -4px 5px 0px #fff9,
+     7px 7px 20px 0px #0002,
+     4px 4px 5px 0px #0001;
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    -webkit-transform-origin: 50% 50% -20px;
+    -moz-transform-origin: 50% 50% -20px;
+    transform-origin: 50% 50% -20px;
+  }
+  .btn-12 span:nth-child(2) {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    -webkit-transform-origin: 50% 50% -20px;
+    -moz-transform-origin: 50% 50% -20px;
+    transform-origin: 50% 50% -20px;
+  }
+  .btn-12:hover span:nth-child(1) {
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+  .btn-12:hover span:nth-child(2) {
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+   color: transparent;
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+  }
+
+
+  /* 13 */
+  .btn-13 {
+    background-color: #89d8d3;
+  background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
+    border: none;
+    z-index: 1;
+  }
+  .btn-13:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 5px;
+     background-color: #4dccc6;
+  background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+    box-shadow:
+     -7px -7px 20px 0px #fff9,
+     -4px -4px 5px 0px #fff9,
+     7px 7px 20px 0px #0002,
+     4px 4px 5px 0px #0001;
+    transition: all 0.3s ease;
+  }
+  .btn-13:hover {
+    color: #fff;
+  }
+  .btn-13:hover:after {
+    top: 0;
+    height: 100%;
+  }
+  .btn-13:active {
+    top: 2px;
+  }
+
+
+  /* 14 */
+  .btn-14 {
+    background: rgb(255,151,0);
+    border: none;
+    z-index: 1;
+  }
+  .btn-14:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 5px;
+    background-color: #eaf818;
+    background-image: linear-gradient(315deg, #eaf818 0%, #f6fc9c 74%);
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5);
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    transition: all 0.3s ease;
+  }
+  .btn-14:hover {
+    color: #000;
+  }
+  .btn-14:hover:after {
+    top: auto;
+    bottom: 0;
+    height: 100%;
+  }
+  .btn-14:active {
+    top: 2px;
+  }
+
+  /* 15 */
+  .btn-15 {
+    background: #b621fe;
+    border: none;
+    z-index: 1;
+  }
+  .btn-15:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-color: #663dff;
+    border-radius: 5px;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    transition: all 0.3s ease;
+  }
+  .btn-15:hover {
+    color: #fff;
+  }
+  .btn-15:hover:after {
+    left: 0;
+    width: 100%;
+  }
+  .btn-15:active {
+    top: 2px;
+  }
+
+
+  /* 16 */
+  .btn-16 {
+    border: none;
+    color: #000;
+  }
+  .btn-16:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    direction: rtl;
+    z-index: -1;
+    box-shadow:
+     -7px -7px 20px 0px #fff9,
+     -4px -4px 5px 0px #fff9,
+     7px 7px 20px 0px #0002,
+     4px 4px 5px 0px #0001;
+    transition: all 0.3s ease;
+  }
+  .btn-16:hover {
+    color: #000;
+  }
+  .btn-16:hover:after {
+    left: auto;
+    right: 0;
+    width: 100%;
+  }
+  .btn-16:active {
+    top: 2px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Show the confirmation dialog after 5 seconds
+        setTimeout(function() {
+            var userResponse = confirm("We have a message for you!\nDo you want to see it?");
+
+            // Check user response
+            if (userResponse) {
+                // Redirect to understand.html if the user clicks "OK"
+                window.location.href = 'understand.html';
+            } else {
+                // Handle the case where the user clicks "Cancel" or closes the dialog
+               
+            }
+        }, 500000); // 5000 milliseconds = 5 seconds
+    });
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+<style>
+    /* Normal link color */
+    a {
+        color: #000; /* Set your default link color */
+        text-decoration: none;
+    }
+
+    /* Hovered link color */
+    a:hover {
+        color: #FFC0CB; /* Set the hover color */
+    }
+
+    /* Visited link color */
+    a:visited {
+        color: #FFC0CB; /* Set the visited color */
+    }
+</style>
+
+
+
+
+
+   <style>
+        body {
+            margin: 0;
+            overflow: auto;
+        }
+
+        #iframeContainer {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+<div id="iframeContainer">
+    <iframe id="myIframe" src="https://topmovies-loader.anshpreet2442.repl.co/" allowfullscreen></iframe>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var iframeContainer = document.getElementById("iframeContainer");
+        var myIframe = document.getElementById("myIframe");
+
+        // Check if the user has seen the iframe before
+        var hasSeenIframe = localStorage.getItem("hasSeenIframe");
+
+        if (!hasSeenIframe) {
+            // Show the iframe
+            iframeContainer.style.display = "block";
+
+            // Set a timeout to hide the iframe after 5 seconds
+            setTimeout(function () {
+                iframeContainer.style.display = "none";
+
+                // Mark that the user has seen the iframe
+                localStorage.setItem("hasSeenIframe", true);
+            }, 5000);
+        } else {
+            // User has seen the iframe before, don't show it
+            iframeContainer.style.display = "none";
+        }
+    });
+</script>
+
+
+
+
+
+
+
+  <script>
+  if (window !== window.top) {
+      // If the page is loaded inside an iframe, redirect to another page or take appropriate action.
+      window.location.href = 'https://this-page-cant-be-embeded.anshpreet2442.repl.co/';
+  }
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+  <div class="elfsight-app-1f5072db-d389-47e7-8591-14a02b512d72" data-elfsight-app-lazy></div>
+
+
+
+
+
+<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+<div class="elfsight-app-a7b46f74-da0b-4442-bd6a-422b9549640f" data-elfsight-app-lazy></div>
+
+
+
+
+
+
+  <audio id="myAudio" src="https://etus.link/playbg-replits" preload="auto"></audio>
+
+  <script>
+    const audio = document.getElementById('myAudio');
+    const keysToListen = [
+      'Space', 'KeyA', 'KeyS', 'KeyD', 'KeyF', 'KeyG', 'KeyH', 'KeyJ', 'KeyK', 'KeyL',
+      'ShiftLeft', 'OSLeft', 'AltLeft', 'Enter', 'Digit1', 'Digit2', 'Digit3', 'Digit4', 'Digit5',
+      'Escape', 'KeyW', 'ControlLeft', 'KeyW', 'KeyA'
+      // Add more keys as needed in the same format
+    ];
+
+    let isAudioPlaying = false;
+
+    document.addEventListener('keydown', function(event) {
+      const key = event.code;
+      if (keysToListen.includes(key)) {
+        if (isAudioPlaying) {
+          audio.pause();
+          isAudioPlaying = false;
+        } else {
+          audio.play();
+          isAudioPlaying = true;
+        }
+      }
+    });
+  </script>
