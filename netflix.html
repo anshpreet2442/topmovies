@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NETFLIX</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#E50914"> <!-- Set the theme color to orange (#FFA500) -->
+   <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/1710/1710249.png">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      padding-top: 120px; /* Added padding to avoid hiding content under the navbar */
+    }
+
+    #navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #333;
+      padding: 10px;
+      text-align: center;
+      z-index: 1000;
+    }
+
+    #navbar img {
+      width: 100px; /* Adjust the width as needed */
+      height: auto;
+      display: inline-block;
+    }
+
+    .hamburger {
+      display: block;
+      cursor: pointer;
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 1001; /* Higher z-index to appear above the navbar */
+    }
+
+    .line {
+      background-color: #fff;
+      height: 3px;
+      width: 30px;
+      margin: 6px 0;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .hamburger.is-active .line:nth-child(2){
+      width: 0px;
+    }
+
+    .hamburger.is-active .line:nth-child(1),
+    .hamburger.is-active .line:nth-child(3){
+      transition-delay: 0.3s;
+    }
+
+    .hamburger.is-active .line:nth-child(1){
+      transform: translateY(13px);
+    }
+
+    .hamburger.is-active .line:nth-child(3){
+      transform: translateY(-13px) rotate(90deg);
+    }
+
+
+
+
+
+
+    #menu-icon {
+      display: none;
+      cursor: pointer;
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 1001; /* Higher z-index to appear above the navbar */
+    }
+
+    #menu-icon span {
+      display: block;
+      width: 30px;
+      height: 3px;
+      margin: 6px 0;
+      background-color: #fff;
+    }
+
+    #menu {
+      display: flex;
+      flex-direction: column;
+      background-color: #333;
+      padding: 20px;
+      position: fixed;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out;
+      z-index: 1000;
+    }
+
+    .box-container {
+      width: 80%; /* Adjust the width as needed */
+      margin: 20px auto;
+      padding: 10px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease-in-out;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .box-container:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 30px rgba(255, 0, 0, 0.5);
+    }
+
+    .glow {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        to bottom right,
+        rgba(255, 0, 0, 0.2),
+        rgba(0, 255, 0, 0.2),
+        rgba(0, 0, 255, 0.2),
+        rgba(255, 0, 0, 0.2)
+      );
+      animation: glow 2s linear infinite;
+    }
+
+    @keyframes glow {
+      0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+      100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+    }
+
+
+    .video-info {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .video-info li {
+      margin-bottom: 10px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      #navbar img {
+        display: none; /* Hide the logo on smaller screens */
+      }
+
+      #menu-icon {
+        display: block;
+      }
+
+      #menu {
+        width: 100%;
+      }
+
+      .box-container {
+        width: 90%; /* Adjust the width as needed for smaller screens */
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      #navbar img {
+        display: none; /* Hide the logo on smaller screens */
+      }
+
+      #menu-icon {
+        display: block;
+      }
+
+      #menu {
+        width: 100%;
+      }
+    }
+
+
+
+    
+  </style>
+</head>
+<body>
+
+<div id="navbar">
+  <div class="hamburger" id="hamburger-6" onclick="toggleMenu()">
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+  </div>
+  <a href="#" id="logo-link">
+    <img src="https://onlinegiftools.com/images/examples-onlinegiftools/netflix-stream.gif" alt="Logo">
+  </a>
+</div>
+
+<div id="menu">
+  <!-- Add menu items here -->
+  <!-- Example: <a href="#">Menu Item 1</a> -->
+</div>
+
+<div class="box-container">
+ <ul class="video-info">
+    <img src="https://image.tmdb.org/t/p/w185/Muev370hN3vdjGsC1ip1HcWqbT.jpg" alt="I-LAND">
+    <li>MOVIE Name: The I-Land (Season 1)</li>
+    <li>Release Date: 12 SEPTEMBER 20--</li>
+    <li>Uploaded By: FLIXOPEDIA</li>
+    <li>Size: 350MB/EPISODE</li>
+  </ul>
+  <!-- Add your poster image here -->
+ 
+  <!-- Add link using script -->
+  <script>
+    document.write('<a href="https://topmovies.anshpreet2442.repl.co/netflix/webseries/theiland/iland.html">OPEN PAGE</a>');
+  </script>
+</div>
+
+<div class="box-container">
+  <ul class="video-info">
+    <li>Video Name: GOSSIP GIRLS Season 1</li>
+    <li>Release Date: 2007 - 2012</li>
+    <li>Uploaded By: Josh Schwartz & 
+   Stephanie Savage</li>
+    <li>Size: ~ 5.4GB/SEASON</li>
+  </ul>
+  <!-- Add your poster image here -->
+  <a href="/netflix/gossipgirls/gossipgirlsbytopmovies.html"><img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/hvDlmhoImfX5oUYS2gXxsMrpSTB.jpg" alt="Topmovies.com"></a>
+  <!-- Add link using script -->
+ 
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="box-container">
+     <a href="/netflix/gossipgirls/gspgrl3/gspgirl3.html"><img src="https://www.themoviedb.org/t/p/original/m2WshgFl5TOh0Li7uHqJoR8O201.jpg" alt="Topmovies.com"></a>
+    <ul class="video-info">
+      <li>Video Name: GOSSIP GIRLS Season 3</li>
+      <li>Release Date: 2007 - 2012</li>
+      <li>Uploaded By: Josh Schwartz & 
+     Stephanie Savage</li>
+      <li>Size: ~ 5.4GB/SEASON</li>
+    </ul>
+    <!-- Add your poster image here -->
+   
+    <!-- Add link using script -->
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <div class="box-container">
+     <a href="/netflix/gossipgirls/gspgrl3/gspgrl4.html"><img src="https://www.themoviedb.org/t/p/original/m2WshgFl5TOh0Li7uHqJoR8O201.jpg" alt="Topmovies.com"></a>
+    <ul class="video-info">
+      <li>Video Name: GOSSIP GIRLS Season 4</li>
+      <li>Release Date: 2007 - 2012</li>
+      <li>Uploaded By: Josh Schwartz & 
+     Stephanie Savage</li>
+      <li>Size: ~ 5.4GB/SEASON</li>
+    </ul>
+    <!-- Add your poster image here -->
+
+    <!-- Add link using script -->
+
+  </div>
+
+
+
+
+  
+
+
+
+
+
+
+  <style>
+    /* Add some styles for the warning message */
+    #warning-message {
+      display: none;
+      text-align: center;
+      font-size: 20px;
+      color: red;
+      margin-top: 50px;
+    }
+  </style>
+
+  <script>
+    // Check if the developer tools are open
+    const detectDevTools = () => {
+      const devtools = /./;
+      devtools.toString = function() {
+        // This will be triggered if the developer tools are open
+        document.getElementById('warning-message').style.display = 'block';
+      };
+      console.log('%c', devtools);
+    };
+
+    // Attach the detectDevTools function to various events that might indicate developer tools opening
+    window.addEventListener('load', detectDevTools);
+    window.addEventListener('resize', detectDevTools);
+    document.addEventListener('keydown', detectDevTools);
+
+    // Disable right-click context menu (optional)
+    document.addEventListener('contextmenu', (event) => {
+      event.preventDefault();
+    });
+  </script>
+  </head>
+  <body>
+
+  <!-- Warning message to be displayed when developer tools are open -->
+  <div id="warning-message">Developer tools are not allowed!</div>
+
+  <!-- Your existing content goes here -->
+  <div class="box-container">
+    <!-- ... (your existing content) ... -->
+  </div>
+
+
+
+
+  <div class="box-container">
+    <ul class="video-info">
+      <li>Movie Name: The.Exorcist.Believer.2023</li>
+      <li>Release Date: October 4, 2023</li>
+      <li>Uploaded By: David Gordon Green</li>
+      <li>Size: 999 MB</li>
+    </ul>
+    <!-- Add your poster image here with fixed dimensions -->
+    <div class="poster-container">
+      <img src="https://www.themoviedb.org/t/p/original/cA78WCdB5n4qXX78YvZOxmdvUXc.jpg" alt="The.Exorcist.Believer.2023" class="poster-image">
+    </div>
+    <!-- Add link using script -->
+    <script>
+      document.write('<a href="https://send.cm/d/q98B">Download</a>');
+    </script>
+  </div>
+  <style>
+    .poster-container {
+      width: 720px; /* Fixed width */
+      height: 540px; /* 9:16 ratio for a width of 720 pixels */
+      overflow: auto; /* Ensure the image is clipped if necessary */
+    }
+
+    .poster-image {
+      width: 5%; /* Make the image fill the container */
+      height: auto; /* Maintain the aspect ratio */
+    }
+  </style>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="box-container">
+    <ul class="video-info">
+      <li>Video Name: Your Video 2</li>
+      <li>Release Date: February 15, 2023</li>
+      <li>Uploaded By: Jane Smith</li>
+      <li>Size: 700 MB</li>
+    </ul>
+    <!-- Add your poster image here -->
+    <img src="your-poster-image-url-2.jpg" alt="Video Poster 2">
+    <!-- Add link using script -->
+    <script>
+      document.write('<a href="your-link-url-2">View Video</a>');
+    </script>
+  </div>
+
+
+
+
+
+
+
+
+  <div class="box-container">
+    <ul class="video-info">
+      <li>Video Name: Your Video 2</li>
+      <li>Release Date: February 15, 2023</li>
+      <li>Uploaded By: Jane Smith</li>
+      <li>Size: 700 MB</li>
+    </ul>
+    <!-- Add your poster image here -->
+    <img src="your-poster-image-url-2.jpg" alt="Video Poster 2">
+    <!-- Add link using script -->
+    <script>
+      document.write('<a href="your-link-url-2">View Video</a>');
+    </script>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+<!-- Add more box containers as needed -->
+
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById('menu');
+      menu.style.transform = menu.style.transform === 'translateX(0%)' ? 'translateX(-100%)' : 'translateX(0%)';
+    }
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Context Menu</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    #custom-context-menu {
+      display: none;
+      position: fixed;
+      background-color: #E50914; /* Netflix Red color */
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
+
+    .context-menu-item {
+      cursor: pointer;
+      padding: 8px;
+      margin: 5px 0;
+      user-select: none;
+    }
+
+    .context-menu-item:hover {
+      background-color: #fff;
+      color: #E50914;
+    }
+  </style>
+</head>
+<body>
+
+<div id="custom-context-menu">
+  <div class="context-menu-item" onclick="closeWindow()">Close Window</div>
+  <div class="context-menu-item" onclick="redirectToHomepage()">Go to Homepage</div>
+  <div class="context-menu-item" onclick="saveImage()">Save Image</div>
+  <div class="context-menu-item" onclick="shareWebpage()">Share Webpage</div>
+</div>
+
+<script>
+  document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+    showContextMenu(e.clientX, e.clientY);
+  });
+
+  function showContextMenu(x, y) {
+    var contextMenu = document.getElementById("custom-context-menu");
+    contextMenu.style.left = x + "px";
+    contextMenu.style.top = y + "px";
+    contextMenu.style.display = "block";
+  }
+
+  function closeWindow() {
+    window.close();
+  }
+
+  function redirectToHomepage() {
+    window.location.href = "https://topmovies.anshpreet2442.repl.co/";
+  }
+
+  function saveImage() {
+    var imageUrl = "https://unsplash.com/photos/tZCrFpSNiIQ/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTF8fGFic3RyYWN0fGVufDB8fHx8MTcwMzQxMDg4MHww&force=true";
+
+    // Create an image element
+    var img = new Image();
+    img.crossOrigin = "Anonymous";
+    img.src = imageUrl;
+
+    // Wait for the image to load
+    img.onload = function () {
+      // Create a canvas element
+      var canvas = document.createElement("canvas");
+      canvas.width = img.width;
+      canvas.height = img.height;
+      var context = canvas.getContext("2d");
+
+      // Draw the image on the canvas
+      context.drawImage(img, 0, 0);
+
+      // Add timestamp and watermark
+      context.fillStyle = "#E50914"; // Red color
+      context.font = "20px Arial";
+      context.fillText("Topmovies.com", 10, 30);
+      context.fillText(new Date().toLocaleString(), 10, 60);
+
+      // Add favicon (assuming it's a URL)
+      var favicon = new Image();
+      favicon.crossOrigin = "Anonymous";
+      favicon.src = "https://icon-icons.com/downloadimage.php?id=170919&root=2699/ICO/512/&file=netflix_logo_icon_170919.ico"; // Replace with the actual favicon URL
+      favicon.onload = function () {
+        context.drawImage(favicon, canvas.width - 30, canvas.height - 30, 20, 20);
+
+        // Save the image
+        var link = document.createElement("a");
+        link.href = canvas.toDataURL("image/png");
+        link.download = "topmovies_image.png";
+        link.click();
+      };
+    };
+  }
+
+  function shareWebpage() {
+    // Use Web Share API if supported
+    if (navigator.share) {
+      navigator.share({
+        title: document.title,
+        text: "Check out this awesome webpage!",
+        url: window.location.href
+      })
+      .then(() => console.log('Successfully shared'))
+      .catch((error) => console.error('Error sharing:', error));
+    } else {
+      // Fallback for browsers that don't support Web Share API
+      console.log("Web Share API is not supported");
+    }
+  }
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style>
+          body {
+              margin: 0;
+              overflow: auto;
+          }
+
+          #iframeContainer {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+          }
+
+          iframe {
+              width: 100%;
+              height: 100%;
+              border: none;
+          }
+      </style>
+  </head>
+  <body>
+
+  <div id="iframeContainer">
+      <iframe id="myIframe" src="https://preloader-fornetflix.anshpreet2442.repl.co/" allowfullscreen></iframe>
+  </div>
+
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          var iframeContainer = document.getElementById("iframeContainer");
+
+          // Show the iframe
+          iframeContainer.style.display = "block";
+
+          // Set a timeout to hide the iframe after 5 seconds
+          setTimeout(function () {
+              iframeContainer.style.display = "none";
+          }, 5000);
+      });
+  </script>
+
+  </body>
+  </html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Background Animation</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: auto;
+        }
+
+        /* Animation keyframes */
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Gradient background with animation */
+        body {
+            background: linear-gradient(90deg, black, #e40913);
+            background-size: 200% 100%;
+            animation: gradientAnimation 5s linear infinite;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Your content goes here -->
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+  /* Add some styles for the warning message */
+  #warning-message {
+    display: none;
+    text-align: center;
+    font-size: 20px;
+    color: red;
+    margin-top: 50px;
+  }
+</style>
+
+<script>
+  // Check if the developer tools are open
+  const detectDevTools = () => {
+    const widthThreshold = window.outerWidth - window.innerWidth > 160;
+    const heightThreshold = window.outerHeight - window.innerHeight > 160;
+
+    if (widthThreshold || heightThreshold) {
+      // This will be triggered if the developer tools are open
+      document.getElementById('warning-message').style.display = 'block';
+    }
+  };
+
+  // Attach the detectDevTools function to various events that might indicate developer tools opening
+  window.addEventListener('resize', detectDevTools);
+  document.addEventListener('keydown', detectDevTools);
+
+  // Disable right-click context menu (optional)
+  document.addEventListener('contextmenu', (event) => {
+    event.preventDefault();
+  });
+</script>
+</head>
+<body>
+
+<!-- Warning message to be displayed when developer tools are open -->
+<div id="warning-message">Developer tools are not allowed!</div>
+
+<!-- Your existing content goes here -->
+<div class="box-container">
+  <!-- ... (your existing content) ... -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+  <div class="elfsight-app-f5386a04-8d95-47c1-87db-b257922459c6" data-elfsight-app-lazy></div>
